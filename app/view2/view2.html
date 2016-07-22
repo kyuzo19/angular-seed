@@ -1,5 +1,27 @@
 <p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<form ng-submit="createUser()" ng-show="authData" id="usrform" role="form" ng-hide="create">
+	<div class="form-group">
+		<label for="firstname">First Name: </label>
+		<input type="text" name="firstname" placeholder="firstname" ng-model="firstname" class="form-control" id="firstname">
+	</div>
+	<div class="form-group">
+		<label for="lastname">Last Name: </label>
+		<input type="text" name="lastname" placeholder="lastname" ng-model="lastname" id="lastname" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="middlename">Middle Name:</label>
+		<input type="text" name="middlename" placeholder="middlename" ng-model="middlename" id="middlename" class="form-control">
+    </div>
+	<div class="form-group">
+		<label for="email">Email: </label>
+		<input type="email" ng-model="email" placeholder="email" id="email" class="form-control" required>
+	</div>
+	<div class="form-group">
+		<label for="pwd">Password: </label>
+		<input type="password" ng-model="password" placeholder="passowrd" id="pwd" class="form-control" required>
+	</div>
+	<button type="submit" value="Create test user" class="btn btn-primary">Create</button>
+</form>
+<div ng-show="create" class="alert alert-success">
+	<strong>Success!</strong> new user created...logging out
+</div>

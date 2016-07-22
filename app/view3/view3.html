@@ -1,0 +1,30 @@
+<p>view 3</p>
+
+<p>this is view 3</p>
+<div ng-show="authData" >
+	<table border="1" style="width:100%" ng-hide="editForm" class="table table-hover">
+		<thead >
+			<tr class="info"> 
+				<td>Firstname</td>
+				<td>Lastname</td>
+				<td>Email</td>
+				<td>Password</td> 
+				<td>Edit/Delete</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="employee in employees">
+				<td>{{employee.firstname}}</td>
+				<td>{{employee.lastname}}</td>
+				<td>{{employee.email}}</td>
+				<td>{{employee.password}}</td>
+				<td>
+					<button ng-click="delete(employee)" class="btn btn-danger">Delete</button>
+					<button ng-click="edit(employee)" class="btn btn-primary">Edit</button>
+				</td>	
+			</tr>
+		</tbody>
+    </table>
+	<test-direct ng-show="editForm">
+	</test-direct>
+</div>

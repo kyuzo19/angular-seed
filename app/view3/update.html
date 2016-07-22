@@ -1,0 +1,15 @@
+<form ng-submit="updateUser()"  id="usrform" role="form">
+	<div class="form-group">
+		<input type="text" name="firstname" placeholder="firstname" ng-model="firstname" class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="text" name="lastname" placeholder="lastname" ng-model="lastname" class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="text" name="middlename" placeholder="middlename" ng-model="middlename" class="form-control">
+	</div>
+	<div class="form-group">
+		<input type="email" ng-model="email" placeholder="email" class="form-control">
+	</div>
+	<button type="submit" value="Update User" class="btn btn-primary">Update</button>
+</form>
